@@ -13,20 +13,38 @@ for(i=0;i<=3;i++){
         board[i][j]='*';
     }
 }
-printf("|00|01|02|\n");
-printf("|10|11|12|\n");
-printf("|20|21|22|\n");
-printf("here is the position matrix, u have to assign the positions accordingly this indexing\n");
-printf("now enter the position for ur first move\n");    //taking input from the user
+for(i=0;i<3;i++){
+    for(j=0;j<3;j++){     // print a sample matrix with empty positions 
+        printf("%c",board[i][j]);
+    }
+printf("\n");
+}
+printf("here is the sample matrix\n");    
+printf("now enter the position where u want to start the game\n");
+printf("enter the position\n");    //taking input from the user
 scanf("%d", &n);
-i = n/10;     //taking input in a single number and then seprate them using '/' and '%' op 
-j = n%10;
-if(i>3 || j>3 || i<0 || j<0){   //checking for invalid input
-    printf("invalid position input, program ended\n"); 
-    exit(0);      //if user gives invalid input program will end  
+    if(n==11)      //finding the position of matrix acc to the standard 2d array indexing and saving that input as 1 at that position
+    board[0][0]='1';  
+    else if(n==12)
+    board[0][1]='1';
+    else if (n==13)
+    board[0][2]='1';                //finding the position of matrix acc to the standard 2d array indexing and saving that input  as 1 at that position   
+    else if (n==21)
+    board[1][0]='1';
+    else if (n==22)
+    board[1][1]='1';
+    else if (n==23)
+    board[1][2]='1';
+    else if (n==31)
+    board[2][0]='1';
+    else if (n==32)
+    board[2][1]='1';
+    else if (n==33)
+    board[2][2]='1';
+    else{
+        printf("invalid position input, program ended\n"); 
+        exit(0);      //if user gives invalid input program will end  
       }
-    else
-board[i][j] = '1';    //assigning user input to the position entered by the user if its valid 
 
 for(i=0;i<3;i++){
    for(j=0;j<3;j++){     // print matirx after 1 move by user
@@ -85,17 +103,31 @@ for(i=0;i<3;i++){
 }
 printf("play your second move\n");    //taking 2nd input from the user
 scanf("%d", &n);
-   i = n/10;    
-j = n%10;
-if(i>3 || j>3 || i<0 || j<0){   
-    printf("invalid position input, program ended\n"); 
-    exit(0);     
+    if(n==11)   
+    board[0][0]='1';  
+    else if(n==12)
+    board[0][1]='1';
+    else if (n==13)
+    board[0][2]='1';               
+    else if (n==21)
+    board[1][0]='1';
+    else if (n==22)
+    board[1][1]='1';
+    else if (n==23)
+    board[1][2]='1';
+    else if (n==31)
+    board[2][0]='1';
+    else if (n==32)
+    board[2][1]='1';
+    else if (n==33)
+    board[2][2]='1';
+    else{
+        printf("invalid position input, program ended\n"); 
+        exit(0);      //if user gives invalid input program will end  
       }
-    else
-board[i][j] = '1';   
 
 for(i=0;i<3;i++){
-   for(j=0;j<3;j++){     // print matirx after 2nd move by user
+   for(j=0;j<3;j++){     // print matirx after 2 move by user
         printf("%c",board[i][j]);
     }
     printf("\n");
@@ -148,19 +180,33 @@ for(i=0;i<3;i++){
     printf("\n");
 
 }
-printf("play your 3rd move\n");    //taking 3rd input from the user
+printf("play your 3rd move\n");    //taking 3nd input from the user
 scanf("%d", &n);
-       i = n/10;    
-j = n%10;
-if(i>3 || j>3 || i<0 || j<0){   
-    printf("invalid position input, program ended\n"); 
-    exit(0);     
+    if(n==11)   
+    board[0][0]='1';  
+    else if(n==12)
+    board[0][1]='1';
+    else if (n==13)
+    board[0][2]='1';               
+    else if (n==21)
+    board[1][0]='1';
+    else if (n==22)
+    board[1][1]='1';
+    else if (n==23)
+    board[1][2]='1';
+    else if (n==31)
+    board[2][0]='1';
+    else if (n==32)
+    board[2][1]='1';
+    else if (n==33)
+    board[2][2]='1';
+    else{
+        printf("invalid position input, program ended\n"); 
+        exit(0);      //if user gives invalid input program will end  
       }
-    else
-board[i][j] = '1'; 
 
 for(i=0;i<3;i++){
-   for(j=0;j<3;j++){     // print matirx after 3rd move by user
+   for(j=0;j<3;j++){     // print matirx after 3 move by user
         printf("%c",board[i][j]);
     }
     printf("\n");
@@ -215,17 +261,31 @@ for(i=0;i<3;i++){
 }
 printf("play your 4th move\n");    //taking 4th input from the user
 scanf("%d", &n);
-i = n/10;    
-j = n%10;
-if(i>3 || j>3 || i<0 || j<0){   
-    printf("invalid position input, program ended\n"); 
-    exit(0);     
+    if(n==11)   
+    board[0][0]='1';  
+    else if(n==12)
+    board[0][1]='1';
+    else if (n==13)
+    board[0][2]='1';               
+    else if (n==21)
+    board[1][0]='1';
+    else if (n==22)
+    board[1][1]='1';
+    else if (n==23)
+    board[1][2]='1';
+    else if (n==31)
+    board[2][0]='1';
+    else if (n==32)
+    board[2][1]='1';
+    else if (n==33)
+    board[2][2]='1';
+    else{
+        printf("invalid position input, program ended\n"); 
+        exit(0);      //if user gives invalid input program will end  
       }
-    else
-board[i][j] = '1'; 
 
 for(i=0;i<3;i++){
-   for(j=0;j<3;j++){     // print matirx after 4th move by user
+   for(j=0;j<3;j++){     // print matirx after 4 move by user
         printf("%c",board[i][j]);
     }
     printf("\n");
@@ -280,14 +340,28 @@ for(i=0;i<3;i++){
 }
 printf("play your 5th move\n");    //taking 5th input from the user
 scanf("%d", &n);
-     i = n/10;    
-j = n%10;
-if(i>3 || j>3 || i<0 || j<0){   
-    printf("invalid position input, program ended\n"); 
-    exit(0);     
+    if(n==11)   
+    board[0][0]='1';  
+    else if(n==12)
+    board[0][1]='1';
+    else if (n==13)
+    board[0][2]='1';               
+    else if (n==21)
+    board[1][0]='1';
+    else if (n==22)
+    board[1][1]='1';
+    else if (n==23)
+    board[1][2]='1';
+    else if (n==31)
+    board[2][0]='1';
+    else if (n==32)
+    board[2][1]='1';
+    else if (n==33)
+    board[2][2]='1';
+    else{
+        printf("invalid position input, program ended\n"); 
+        exit(0);      //if user gives invalid input program will end  
       }
-    else
-board[i][j] = '1'; 
 
 for(i=0;i<3;i++){
    for(j=0;j<3;j++){     // print matirx after 5 move by user
@@ -345,14 +419,28 @@ for(i=0;i<3;i++){
 }
 printf("play your 6th move\n");    //taking 6th input from the user
 scanf("%d", &n);
-i = n/10;    
-j = n%10;
-if(i>3 || j>3 || i<0 || j<0){   
-    printf("invalid position input, program ended\n"); 
-    exit(0);     
+    if(n==11)   
+    board[0][0]='1';  
+    else if(n==12)
+    board[0][1]='1';
+    else if (n==13)
+    board[0][2]='1';               
+    else if (n==21)
+    board[1][0]='1';
+    else if (n==22)
+    board[1][1]='1';
+    else if (n==23)
+    board[1][2]='1';
+    else if (n==31)
+    board[2][0]='1';
+    else if (n==32)
+    board[2][1]='1';
+    else if (n==33)
+    board[2][2]='1';
+    else{
+        printf("invalid position input, program ended\n"); 
+        exit(0);      //if user gives invalid input program will end  
       }
-    else
-board[i][j] = '1'; 
 
 for(i=0;i<3;i++){
    for(j=0;j<3;j++){     // print matirx after 6th move by user

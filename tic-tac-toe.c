@@ -13,39 +13,37 @@ for(i=0;i<=3;i++){
         board[i][j]='*';
     }
 }
-for(i=0;i<3;i++){
-    for(j=0;j<3;j++){     // print a sample matrix with empty positions 
-        printf("%c",board[i][j]);
-    }
-printf("\n");
-}
-printf("here is the sample matrix\n");    
-printf("now enter the position where u want to start the game\n");
-printf("enter the position\n");    //taking input from the user
+printf("|00|01|02|\n");
+printf("|10|11|12|\n");
+printf("|20|21|22|\n");
+printf("here is the position matrix, u have to assign the positions accordingly this indexing\n");
+printf("now enter the position for ur first move\n");    //taking input from the user
 scanf("%d", &n);
-    if(n==11)      //finding the position of matrix acc to the standard 2d array indexing and saving that input as 1 at that position
-    board[0][0]='1';  
-    else if(n==12)
-    board[0][1]='1';
-    else if (n==13)
-    board[0][2]='1';                //finding the position of matrix acc to the standard 2d array indexing and saving that input  as 1 at that position   
-    else if (n==21)
-    board[1][0]='1';
-    else if (n==22)
-    board[1][1]='1';
-    else if (n==23)
-    board[1][2]='1';
-    else if (n==31)
-    board[2][0]='1';
-    else if (n==32)
-    board[2][1]='1';
-    else if (n==33)
-    board[2][2]='1';
-    else{
-        printf("invalid position input, program ended\n"); 
-        exit(0);      //if user gives invalid input program will end  
+i = n/10;     //taking input in a single number and then seprate them using '/' and '%' op 
+j = n%10;
+if(i==0 && j==0){
+    board[0][0] = '1';   //assigning user input to the position entered by the user if its valid 
+}else if(i==0 && j==1){
+    board[0][1] = '1';
+}else if(i==0 && j==2){
+    board[0][2] = '1'; 
+}else if(i==1 && j==0){
+    board[1][0] = '1';
+}else if(i==1 && j==1){
+    board[1][1] = '1';
+}else if(i==1 && j==2){
+    board[1][2] = '1';
+}else if(i==2 && j==0){
+    board[2][0] = '1';
+}else if(i==2 && j==1){
+    board[2][1] = '1';
+}else if(i==2 && j==2){
+    board[2][2] = '1';
+}
+else{
+    printf("invalid position input, program ended\n"); 
+    exit(0);      //if user gives invalid input program will end  
       }
-
 for(i=0;i<3;i++){
    for(j=0;j<3;j++){     // print matirx after 1 move by user
         printf("%c",board[i][j]);
@@ -103,31 +101,34 @@ for(i=0;i<3;i++){
 }
 printf("play your second move\n");    //taking 2nd input from the user
 scanf("%d", &n);
-    if(n==11)   
-    board[0][0]='1';  
-    else if(n==12)
-    board[0][1]='1';
-    else if (n==13)
-    board[0][2]='1';               
-    else if (n==21)
-    board[1][0]='1';
-    else if (n==22)
-    board[1][1]='1';
-    else if (n==23)
-    board[1][2]='1';
-    else if (n==31)
-    board[2][0]='1';
-    else if (n==32)
-    board[2][1]='1';
-    else if (n==33)
-    board[2][2]='1';
-    else{
-        printf("invalid position input, program ended\n"); 
-        exit(0);      //if user gives invalid input program will end  
+   i = n/10;    
+j = n%10;
+if(i==0 && j==0){
+    board[0][0] = '1';   
+}else if(i==0 && j==1){
+    board[0][1] = '1';
+}else if(i==0 && j==2){
+    board[0][2] = '1'; 
+}else if(i==1 && j==0){
+    board[1][0] = '1';
+}else if(i==1 && j==1){
+    board[1][1] = '1';
+}else if(i==1 && j==2){
+    board[1][2] = '1';
+}else if(i==2 && j==0){
+    board[2][0] = '1';
+}else if(i==2 && j==1){
+    board[2][1] = '1';
+}else if(i==2 && j==2){
+    board[2][2] = '1';
+}
+else{
+    printf("invalid position input, program ended\n"); 
+    exit(0);     
       }
 
 for(i=0;i<3;i++){
-   for(j=0;j<3;j++){     // print matirx after 2 move by user
+   for(j=0;j<3;j++){     // print matirx after 2nd move by user
         printf("%c",board[i][j]);
     }
     printf("\n");
@@ -180,38 +181,68 @@ for(i=0;i<3;i++){
     printf("\n");
 
 }
-printf("play your 3rd move\n");    //taking 3nd input from the user
+printf("play your 3rd move\n");    //taking 3rd input from the user
 scanf("%d", &n);
-    if(n==11)   
-    board[0][0]='1';  
-    else if(n==12)
-    board[0][1]='1';
-    else if (n==13)
-    board[0][2]='1';               
-    else if (n==21)
-    board[1][0]='1';
-    else if (n==22)
-    board[1][1]='1';
-    else if (n==23)
-    board[1][2]='1';
-    else if (n==31)
-    board[2][0]='1';
-    else if (n==32)
-    board[2][1]='1';
-    else if (n==33)
-    board[2][2]='1';
-    else{
-        printf("invalid position input, program ended\n"); 
-        exit(0);      //if user gives invalid input program will end  
+       i = n/10;    
+j = n%10;
+if(i==0 && j==0){
+    board[0][0] = '1';   
+}else if(i==0 && j==1){
+    board[0][1] = '1';
+}else if(i==0 && j==2){
+    board[0][2] = '1'; 
+}else if(i==1 && j==0){
+    board[1][0] = '1';
+}else if(i==1 && j==1){
+    board[1][1] = '1';
+}else if(i==1 && j==2){
+    board[1][2] = '1';
+}else if(i==2 && j==0){
+    board[2][0] = '1';
+}else if(i==2 && j==1){
+    board[2][1] = '1';
+}else if(i==2 && j==2){
+    board[2][2] = '1';
+}
+else{
+    printf("invalid position input, program ended\n"); 
+    exit(0);     
       }
 
 for(i=0;i<3;i++){
-   for(j=0;j<3;j++){     // print matirx after 3 move by user
+   for(j=0;j<3;j++){     // print matirx after 3rd move by user
         printf("%c",board[i][j]);
     }
     printf("\n");
 
 }
+//we check the board horizontally if any row has all 1's then user wins
+if(board[0][0] == '1' && board[0][1] == '1' && board[0][2] == '1'){
+printf("user win the game\n");
+exit(0);
+}
+else if(board[1][0] == '1' && board[1][1] == '1' && board[1][2] == '1'){
+    printf("user win the game\n");
+    exit(0);
+}
+else if(board[2][0] == '1' && board[2][1] == '1' && board[2][2] == '1'){
+    printf("user win the game\n");
+    exit(0);
+}
+//we check the board vertically if any row has all 1's then user wins
+if(board[0][0] == '1' && board[1][0] == '1' && board[2][0] == '1'){
+printf("user win the game\n");
+exit(0);
+}
+else if(board[0][1] == '1' && board[1][1] == '1' && board[2][1] == '1'){
+    printf("user win the game\n");
+    exit(0);
+}
+else if(board[0][2] == '1' && board[1][2] == '1' && board[2][2] == '1'){
+    printf("user win the game\n");
+    exit(0);
+}
+
 printf("here is the second move by computer\n");
 int played3 = 0;
 if (board[1][1] == '*') {
@@ -259,33 +290,64 @@ for(i=0;i<3;i++){
     printf("\n");
 
 }
+//we check the board horizontally if any row has all 0's then user wins
+if(board[0][0] == '0' && board[0][1] == '0' && board[0][2] == '0'){
+printf("user win the game\n");
+exit(0);
+}
+else if(board[1][0] == '0' && board[1][1] == '0' && board[1][2] == '0'){
+    printf("user win the game\n");
+    exit(0);
+}
+else if(board[2][0] == '0' && board[2][1] == '0' && board[2][2] == '0'){
+    printf("user win the game\n");
+    exit(0);
+}
+//we check the board vertically if any row has all 0's then user wins
+if(board[0][0] == '0' && board[1][0] == '0' && board[2][0] == '0'){
+printf("user win the game\n");
+exit(0);
+}
+else if(board[0][1] == '0' && board[1][1] == '0' && board[2][1] == '0'){
+    printf("user win the game\n");
+    exit(0);
+}
+else if(board[0][2] == '0' && board[1][2] == '0' && board[2][2] == '0'){
+    printf("user win the game\n");
+    exit(0);
+}
+
 printf("play your 4th move\n");    //taking 4th input from the user
 scanf("%d", &n);
-    if(n==11)   
-    board[0][0]='1';  
-    else if(n==12)
-    board[0][1]='1';
-    else if (n==13)
-    board[0][2]='1';               
-    else if (n==21)
-    board[1][0]='1';
-    else if (n==22)
-    board[1][1]='1';
-    else if (n==23)
-    board[1][2]='1';
-    else if (n==31)
-    board[2][0]='1';
-    else if (n==32)
-    board[2][1]='1';
-    else if (n==33)
-    board[2][2]='1';
-    else{
-        printf("invalid position input, program ended\n"); 
-        exit(0);      //if user gives invalid input program will end  
+i = n/10;    
+j = n%10;
+if(i==0 && j==0){
+    board[0][0] = '1';   
+}else if(i==0 && j==1){
+    board[0][1] = '1';
+}else if(i==0 && j==2){
+    board[0][2] = '1'; 
+}else if(i==1 && j==0){
+    board[1][0] = '1';
+}else if(i==1 && j==1){
+    board[1][1] = '1';
+}else if(i==1 && j==2){
+    board[1][2] = '1';
+}else if(i==2 && j==0){
+    board[2][0] = '1';
+}else if(i==2 && j==1){
+    board[2][1] = '1';
+}else if(i==2 && j==2){
+    board[2][2] = '1';
+}
+else{
+    printf("invalid position input, program ended\n"); 
+    exit(0);     
       }
 
+
 for(i=0;i<3;i++){
-   for(j=0;j<3;j++){     // print matirx after 4 move by user
+   for(j=0;j<3;j++){     // print matirx after 4th move by user
         printf("%c",board[i][j]);
     }
     printf("\n");
@@ -297,6 +359,33 @@ if (board[1][1] == '*') {
     board[1][1] = '0';
     played4 = 1;
 }
+//we check the board horizontally if any row has all 1's then user wins
+if(board[0][0] == '1' && board[0][1] == '1' && board[0][2] == '1'){
+printf("user win the game\n");
+exit(0);
+}
+else if(board[1][0] == '1' && board[1][1] == '1' && board[1][2] == '1'){
+    printf("user win the game\n");
+    exit(0);
+}
+else if(board[2][0] == '1' && board[2][1] == '1' && board[2][2] == '1'){
+    printf("user win the game\n");
+    exit(0);
+}
+//we check the board vertically if any row has all 1's then user wins
+if(board[0][0] == '1' && board[1][0] == '1' && board[2][0] == '1'){
+printf("user win the game\n");
+exit(0);
+}
+else if(board[0][1] == '1' && board[1][1] == '1' && board[2][1] == '1'){
+    printf("user win the game\n");
+    exit(0);
+}
+else if(board[0][2] == '1' && board[1][2] == '1' && board[2][2] == '1'){
+    printf("user win the game\n");
+    exit(0);
+}
+
 if(!played4){
     for(i=0;i<3 && !played4;i++){
         for(j=0;j<3 && !played4;j++){
@@ -338,163 +427,94 @@ for(i=0;i<3;i++){
     printf("\n");
 
 }
+//we check the board horizontally if any row has all 0's then user wins
+if(board[0][0] == '0' && board[0][1] == '0' && board[0][2] == '0'){
+printf("user win the game\n");
+exit(0);
+}
+else if(board[1][0] == '0' && board[1][1] == '0' && board[1][2] == '0'){
+    printf("user win the game\n");
+    exit(0);
+}
+else if(board[2][0] == '0' && board[2][1] == '0' && board[2][2] == '0'){
+    printf("user win the game\n");
+    exit(0);
+}
+//we check the board vertically if any row has all 0's then user wins
+if(board[0][0] == '0' && board[1][0] == '0' && board[2][0] == '0'){
+printf("user win the game\n");
+exit(0);
+}
+else if(board[0][1] == '0' && board[1][1] == '0' && board[2][1] == '0'){
+    printf("user win the game\n");
+    exit(0);
+}
+else if(board[0][2] == '0' && board[1][2] == '0' && board[2][2] == '0'){
+    printf("user win the game\n");
+    exit(0);
+}
+
 printf("play your 5th move\n");    //taking 5th input from the user
 scanf("%d", &n);
-    if(n==11)   
-    board[0][0]='1';  
-    else if(n==12)
-    board[0][1]='1';
-    else if (n==13)
-    board[0][2]='1';               
-    else if (n==21)
-    board[1][0]='1';
-    else if (n==22)
-    board[1][1]='1';
-    else if (n==23)
-    board[1][2]='1';
-    else if (n==31)
-    board[2][0]='1';
-    else if (n==32)
-    board[2][1]='1';
-    else if (n==33)
-    board[2][2]='1';
-    else{
-        printf("invalid position input, program ended\n"); 
-        exit(0);      //if user gives invalid input program will end  
+     i = n/10;    
+j = n%10;
+if(i==0 && j==0){
+    board[0][0] = '1';   
+}else if(i==0 && j==1){
+    board[0][1] = '1';
+}else if(i==0 && j==2){
+    board[0][2] = '1'; 
+}else if(i==1 && j==0){
+    board[1][0] = '1';
+}else if(i==1 && j==1){
+    board[1][1] = '1';
+}else if(i==1 && j==2){
+    board[1][2] = '1';
+}else if(i==2 && j==0){
+    board[2][0] = '1';
+}else if(i==2 && j==1){
+    board[2][1] = '1';
+}else if(i==2 && j==2){
+    board[2][2] = '1';
+}
+else{
+    printf("invalid position input, program ended\n"); 
+    exit(0);     
       }
 
+
 for(i=0;i<3;i++){
-   for(j=0;j<3;j++){     // print matirx after 5 move by user
+   for(j=0;j<3;j++){     // print matirx after 5th move by user
         printf("%c",board[i][j]);
     }
     printf("\n");
 
 }
-printf("here is the 5th move by computer\n");
-int played5 = 0;
-if (board[1][1] == '*') {
-    board[1][1] = '0';
-    played5 = 1;
+//we check the board horizontally if any row has all 1's then user wins
+if(board[0][0] == '1' && board[0][1] == '1' && board[0][2] == '1'){
+printf("user win the game\n");
+exit(0);
 }
-if(!played5){
-    for(i=0;i<3 && !played5;i++){
-        for(j=0;j<3 && !played5;j++){
-            if(board[i][0]=='1' && board[i][1]=='1' && board[i][2] == '*') {board[i][2]='0';
-            played5=1;}
-            else if
-            (board[i][0]=='1' && board[i][1]=='*' && board[i][2]=='1'){board[i][1]='0';
-            played5=1;}
-            else if 
-            (board[i][0]=='*' && board[i][1]=='1' && board[i][2]=='1'){board[i][0]='0'; played5=1;}
-
-            else if 
-            (board[0][j]=='1' && board[1][j]=='1' && board[2][j]=='*'){board[2][j]='0'; played5= 1;}
-            else if 
-            (board[0][j]=='*' && board[1][j]=='1' && board[2][j]=='1'){board[0][j]='0'; played5= 1;}
-            else if 
-            (board[0][j]=='1' && board[1][j]=='*' && board[2][j]=='1'){board[1][j]='0'; played5= 1;}
-
-
-
-        }
-    }
+else if(board[1][0] == '1' && board[1][1] == '1' && board[1][2] == '1'){
+    printf("user win the game\n");
+    exit(0);
 }
-if(!played5){
-    for(i=0;i<3 && !played5;i++){
-        for(j=0;j<3 &&!played5;j++){
-            if(board[i][j]=='*'){
-                board[i][j]='0';
-                played5 = 1;
-            }
-        }
-    }
+else if(board[2][0] == '1' && board[2][1] == '1' && board[2][2] == '1'){
+    printf("user win the game\n");
+    exit(0);
 }
-
-for(i=0;i<3;i++){
-   for(j=0;j<3;j++){     // print matirx after 6th move by computer
-        printf("%c",board[i][j]);
-    }
-    printf("\n");
-
+//we check the board vertically if any row has all 1's then user wins
+if(board[0][0] == '1' && board[1][0] == '1' && board[2][0] == '1'){
+printf("user win the game\n");
+exit(0);
 }
-printf("play your 6th move\n");    //taking 6th input from the user
-scanf("%d", &n);
-    if(n==11)   
-    board[0][0]='1';  
-    else if(n==12)
-    board[0][1]='1';
-    else if (n==13)
-    board[0][2]='1';               
-    else if (n==21)
-    board[1][0]='1';
-    else if (n==22)
-    board[1][1]='1';
-    else if (n==23)
-    board[1][2]='1';
-    else if (n==31)
-    board[2][0]='1';
-    else if (n==32)
-    board[2][1]='1';
-    else if (n==33)
-    board[2][2]='1';
-    else{
-        printf("invalid position input, program ended\n"); 
-        exit(0);      //if user gives invalid input program will end  
-      }
-
-for(i=0;i<3;i++){
-   for(j=0;j<3;j++){     // print matirx after 6th move by user
-        printf("%c",board[i][j]);
-    }
-    printf("\n");
-
+else if(board[0][1] == '1' && board[1][1] == '1' && board[2][1] == '1'){
+    printf("user win the game\n");
+    exit(0);
 }
-printf("here is the 6th move by computer\n");
-int played6 = 0;
-if (board[1][1] == '*') {
-    board[1][1] = '0';
-    played6 = 1;
-}
-if(!played6){
-    for(i=0;i<3 && !played6;i++){
-        for(j=0;j<3 && !played6;j++){
-            if(board[i][0]=='1' && board[i][1]=='1' && board[i][2] == '*') {board[i][2]='0';
-            played6=1;}
-            else if
-            (board[i][0]=='1' && board[i][1]=='*' && board[i][2]=='1'){board[i][1]='0';
-            played6=1;}
-            else if 
-            (board[i][0]=='*' && board[i][1]=='1' && board[i][2]=='1'){board[i][0]='0'; played6=1;}
-
-            else if 
-            (board[0][j]=='1' && board[1][j]=='1' && board[2][j]=='*'){board[2][j]='0'; played6= 1;}
-            else if 
-            (board[0][j]=='*' && board[1][j]=='1' && board[2][j]=='1'){board[0][j]='0'; played6 = 1;}
-            else if 
-            (board[0][j]=='1' && board[1][j]=='*' && board[2][j]=='1'){board[1][j]='0'; played6= 1;}
-
-
-
-        }
-    }
-}
-if(!played6){
-    for(i=0;i<3 && !played6;i++){
-        for(j=0;j<3 &&!played6;j++){
-            if(board[i][j]=='*'){
-                board[i][j]='0';
-                played6 = 1;
-            }
-        }
-    }
-}
-
-for(i=0;i<3;i++){
-   for(j=0;j<3;j++){     // print matirx after 6th move by computer
-        printf("%c",board[i][j]);
-    }
-    printf("\n");
-
+else if(board[0][2] == '1' && board[1][2] == '1' && board[2][2] == '1'){
+    printf("user win the game\n");
+    exit(0);
 }
 
 return 0;
